@@ -1,0 +1,20 @@
+#header{
+	background-image: url("../img/back.jpg");
+	background-repeat:repeat-x";
+	background-repeat:repeat-y";
+	width:100%;
+}
+hr#dec{
+	border:2px solid #fb6a92;
+	width:100%;
+}
+img{
+	width:30px;
+	height:30px;
+	margin:10px;
+}
+img.i{
+	width:100px;
+	height:100px; 
+	margin-bottom:30px;
+}

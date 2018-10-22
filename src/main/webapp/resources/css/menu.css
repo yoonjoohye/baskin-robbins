@@ -1,0 +1,28 @@
+*{
+	margin:0px;
+	padding:0px;
+	color:#282427;
+}
+div#menu{
+	margin-left:20%;
+	margin-right:20%;
+	margin-top:15px;
+	margin-bottom:15px;
+}
+a.a{
+	margin-right:50px;
+}
+span.a{
+	margin-right:50px;
+	font-weight:bold;
+	color:#fb6a92;
+}
+a.a span{
+	color:#fb6a92;
+}
+a.b{
+	margin-left:250px;
+}
+a.c{
+	margin-left:100px;
+}

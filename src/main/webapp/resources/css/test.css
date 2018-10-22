@@ -1,0 +1,26 @@
+*{
+	margin:0px;
+	padding:0px;
+	color:#282427;
+}
+table{
+	border-collapse:collapse;
+}
+a{
+	text-decoration:none;
+	font-weight:bold;
+	color:gray;
+}
+button{
+	width:100px;
+	height:30px;
+	border:3px solid #fb6a92;
+	background-color:#fb6a92;
+	color:white;
+	margin:10px;
+	
+}
+button:hover{
+	background-color:white;
+	color:#fb6a92;
+}

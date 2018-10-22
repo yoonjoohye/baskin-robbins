@@ -1,0 +1,8 @@
+eclipse.preferences.version=1
+encoding//src/main/java/com/example/project/controller/BoardController.java=UTF-8
+encoding//src/main/java/com/example/project/controller/ReplyController.java=UTF-8
+encoding//src/main/java/com/example/project/model/dao/BoardDAOImpl.java=UTF-8
+encoding//src/main/java/com/example/project/model/dao/ReplyDAOImpl.java=UTF-8
+encoding//src/main/java/com/example/project/model/dto/ReplyVO.java=UTF-8
+encoding//src/main/java/com/example/project/service/BoardPager.java=UTF-8
+encoding//src/main/java/com/example/project/service/BoardServiceImpl.java=UTF-8

@@ -1,0 +1,46 @@
+*{
+	margin:0px;
+	padding:0px;
+	color:#282427;
+	font-family: 'Nanum Gothic', sans-serif;
+}
+div#board{
+	text-align:center;
+}
+div#board input[type="text"]{
+	border:0px;
+	border-bottom:2px solid #fb6a92;
+	width:800px;
+	height:30px;
+	font-size:30pt;
+	padding:10px;
+	text-align:center;
+}
+div#board span{
+	padding:10px;
+	font-size:12pt;
+	color:gray;
+	padding:10px;
+}
+div#board textarea{
+	padding:10px;
+	width:800px;
+	height:400px;
+	color:gray;
+	font-size:18pt;
+	border-radius:10px;
+}
+div#command{
+	text-align: center;
+}
+div#command textarea{
+	border-radius:5px;
+	padding:10px;
+	width:700px;
+	height:80px;
+}
+div#command button{
+	border-radius:5px;
+	width:100px;
+	height:100px;
+}

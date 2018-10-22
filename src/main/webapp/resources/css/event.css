@@ -1,0 +1,12 @@
+*{
+	margin:0px;
+	padding:0px;
+	color:#282427;
+	font-family: 'Nanum Gothic', sans-serif;
+}
+div#greeting{
+	color:#1b181a;
+	text-align:center;
+	margin-top:30px;
+	margin-bottom:30px;
+}

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+    
+     <mapper namespace="board">
+    <select id="listAll" resultType="com.example.project.model.dto.BoardVO">
+       SELECT bno, title, content, b.regdate, viewcnt, user_name AS userName, 
+                    <!-- ** 댓글숫자표시 -->
+           (SELECT COUNT(*) FROM tbl_reply WHERE bno=b.bno) AS recnt
+            FROM tbl_board b, tbl_member m
+        <include refid="search"></include>
+        ORDER BY bno DESC, b.regdate DESC
+    <include refid="paging"></include> 
+</select>
+      
+   <!-- 01_02. 게시글 레코드 갯수 -->
+<select id="countArticle" resultType="int">
+ 
+    SELECT COUNT(*) 
+    FROM tbl_board b, tbl_member m
+ 
+    <!-- WHERE절을 include 태그로 삽입 -->
+    <include refid="search"></include>
+ 
+</select>
+
+<sql id="search">
+    <choose>
+        <!-- 검색옵션이 전체 검색일 경우 -->
+        <when test="searchOption.equals('all')">
+        WHERE b.writer = m.user_id
+        AND 
+           ( user_name like concat('%',#{keyword},'%') 
+            OR content like concat('%',#{keyword},'%') 
+            OR title like concat('%',#{keyword},'%'))
+        </when>
+        <!-- 전체 검색이 아닐 경우 -->
+        <otherwise>
+            WHERE b.writer = m.user_id 
+            AND ${searchOption} like concat('%',#{keyword},'%')
+        </otherwise>
+    </choose>
+</sql>
+
+<!--  페이지 나누기 -->
+<sql id="paging">
+   limit #{start}, #{end}
+</sql>
+
+
+      <!-- 2. 게시글 작성 -->
+      <insert id="insert">
+        insert into tbl_board(title,content,writer)
+        values(#{title}, #{content}, #{writer})
+      
+      </insert>
+     
+     <!-- 3. 상세 보기 -->
+     <select id="view" resultType="com.example.project.model.dto.BoardVO">
+       select * from tbl_board
+       where bno=#{bno}
+     </select>
+     
+    
+     <!-- 4.  조회수 증가처리 -->
+    <update id="increaseViewcnt">
+        UPDATE tbl_board SET viewcnt = viewcnt + 1 
+        WHERE bno = #{bno}
+    </update>
+     
+     
+     <!-- 5. 수정 -->
+     <update id="updateArticle">
+        update tbl_board 
+        set
+         title=#{title},
+         content=#{content}
+        where 
+         bno=#{bno}
+         
+     </update>
+     
+     <!-- 6. 삭제 -->
+     <delete id="deleteArticle">
+       delete from tbl_board
+       where bno=#{bno}
+     
+     </delete>
+     
+     
+     
+    
+    </mapper>
