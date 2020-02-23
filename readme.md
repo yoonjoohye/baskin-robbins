@@ -1,10 +1,10 @@
 # Baskin Robbins WEB
 
-Baskin Robbins 홈페이지 클론코딩
+> Baskin Robbins 홈페이지 클론코딩
 
 Skills
 -----------------------------------
-spring + mybatis + Tomcat
+> spring + mybatis + Tomcat
 
 ScreenShots
 -------------------------------------
