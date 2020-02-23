@@ -1,4 +1,4 @@
-# Baskin Robbins (Spring)
+# Baskin Robbins WEB
 
 Baskin Robbins 홈페이지 클론코딩
 
