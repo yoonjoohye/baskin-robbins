@@ -2,11 +2,11 @@
 
 Baskin Robbins 홈페이지 클론코딩
 
-### Skills
+Skills
 -----------------------------------
 spring + mybatis + Tomcat
 
-### ScreenShots
+ScreenShots
 -------------------------------------
 ##### Index
 ![인덱스화면](https://user-images.githubusercontent.com/26542929/75113239-58e5f900-568f-11ea-9f98-a5519c9674d8.png)
